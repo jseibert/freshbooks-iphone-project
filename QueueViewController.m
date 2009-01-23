@@ -123,7 +123,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	id cell = [tv dequeueReusableCellWithIdentifier:@"DetailCell"];
 	if(cell == nil){
-		cell = [[[NSBundle mainBundle] loadNibNamed:@"QueueViewCell" owner:[[[NSObject alloc] init] autorelease] options:[NSDictionary dictionary]] objectAtIndex:1];
+		cell = [[[NSBundle mainBundle] loadNibNamed:@"QueueViewCell" owner:[[[NSObject alloc] init] autorelease] options:[NSDictionary dictionary]] objectAtIndex:0];
 		[cell setTableController: self];
 	}
 
