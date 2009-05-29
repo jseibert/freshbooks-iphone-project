@@ -48,19 +48,13 @@
 
 - (BOOL) submitTime:(NSInteger)seconds project:(NSMutableDictionary *)project task:(NSMutableDictionary *)task note:(NSString *)note error:(NSString **)error{
 	
-	if(seconds > 0 && project && task){
+	if(seconds > 0 && project && task && note && ([@"" compare:note] != 0) ){
 		NSMutableDictionary *entry = [NSMutableDictionary dictionary];
 		[entry setObject:[NSNumber numberWithInteger:seconds] forKey:@"seconds"];
 		[entry setObject:project forKey:@"project"];
 		[entry setObject:task forKey:@"task"];
-		// make sure there is a value for the note
-		if(note){
-			[entry setObject:note forKey:@"note"];
-		}
-		else{
-			[entry setObject:@"" forKey:@"note"];
-		}
-		// Make sure each object is unique.
+		[entry setObject:note forKey:@"note"];
+		// Make sure each object is unique. //DOESNT WORK
 		[entry setObject:[NSDate date] forKey:@"submissionKey"];
 		[entry setObject:[NSDate date] forKey:@"submission_time"];
 		[self.queue addObject:entry];
@@ -76,8 +70,11 @@
 	else if (!project){
 		*error = @"You must select a project";
 	}
-	else{
+	else if (!task) {
 		*error = @"You must select a task";
+	}
+	else {
+		*error = @"You must have a note";
 	}
 	
 	return NO;
