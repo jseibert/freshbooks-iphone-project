@@ -415,6 +415,7 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FreshbooksTimer" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -567,7 +568,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = FreshBooks;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7FAE5FE8-2B98-4FC1-A48F-C546EDCC5CB8";
-				SDKROOT = iphoneos2.0;
+				SDKROOT = iphoneos;
 			};
 			name = "Ad Hoc Release";
 		};
@@ -602,7 +603,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = FreshBooks;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1F96FDE0-8CDD-4858-A21D-80377769D1ED";
-				SDKROOT = iphoneos2.0;
+				SDKROOT = iphoneos;
 			};
 			name = "App Store Release";
 		};
@@ -634,7 +635,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = FreshBooks;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "48367542-E842-41A1-B5D6-9E8C2852DA6A";
-				SDKROOT = iphoneos2.0;
+				SDKROOT = iphoneos;
 			};
 			name = Distribution;
 		};
@@ -668,7 +669,7 @@
 				OTHER_LDFLAGS = "-lxml2";
 				PREBINDING = NO;
 				PRODUCT_NAME = FreshBooks;
-				SDKROOT = iphoneos2.0;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -684,7 +685,7 @@
 				INFOPLIST_PREPROCESS = YES;
 				PREBINDING = NO;
 				PRODUCT_NAME = FreshBooks;
-				SDKROOT = iphoneos2.0;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
