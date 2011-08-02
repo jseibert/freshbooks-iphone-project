@@ -50,7 +50,7 @@
 	NSMutableDictionary *auth = [configData valueForKey:@"authentication"];
 	domainInput.text = [auth valueForKey:@"domain"];
 	keyInput.text = [auth valueForKey:@"apikey"];
-	keyInput.isSecureTextEntry = !![auth valueForKey:@"isValid"];
+	//keyInput.isSecureTextEntry = !![auth valueForKey:@"isValid"];
 }
 
 // Make sure fields are visible for editing
@@ -92,7 +92,7 @@
 	[self slideDown];
 	
 	if([sender.text length] == 0){
-		keyInput.isSecureTextEntry = NO;
+		//keyInput.isSecureTextEntry = NO;
 	}
 }
 
@@ -135,7 +135,7 @@
 	loadingView.alpha = 0.0;
 	[UIView commitAnimations];
 
-	keyInput.isSecureTextEntry = YES;
+	//keyInput.isSecureTextEntry = YES;
 	[configData setValue:@"YES" forKeyPath:@"authentication.isValid"];
 }
 
@@ -144,7 +144,7 @@
 	loadingView.alpha = 0.0;
 	[UIView commitAnimations];
 	[[[[UIAlertView alloc] initWithTitle:@"Error Loading Project Data" message:error delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil] autorelease] show];
-	keyInput.isSecureTextEntry = NO;
+	//keyInput.isSecureTextEntry = NO;
 	[configData setValue:nil forKeyPath:@"authentication.isValid"];
 }
 
